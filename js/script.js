@@ -1,5 +1,8 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Constants
+    const SECTION_OFFSET = 100;
+    
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-links a');
     
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
-            if (window.pageYOffset >= sectionTop - 100) {
+            if (window.pageYOffset >= sectionTop - SECTION_OFFSET) {
                 current = section.getAttribute('id');
             }
         });

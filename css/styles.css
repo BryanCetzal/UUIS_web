@@ -1,4 +1,8 @@
 /* Reset and Base Styles */
+:root {
+    --service-card-min-width: 300px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -111,7 +115,7 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--service-card-min-width), 1fr));
     gap: 2rem;
 }
 
